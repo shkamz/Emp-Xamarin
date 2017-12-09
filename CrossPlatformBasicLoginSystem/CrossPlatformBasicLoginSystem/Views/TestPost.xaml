@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossPlatformBasicLoginSystem.Views.TestPost"
+             NavigationPage.HasBackButton="False"
+             xmlns:ViewModels="clr-namespace:CrossPlatformBasicLoginSystem.ViewModels;assembly=CrossPlatformBasicLoginSystem">
+
+    <ContentPage.BindingContext>
+        <ViewModels:AnnouncementMVM />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Entry Text="{Binding SelectAnnouncement.Username}" />
+        <Entry Text="{Binding SelectAnnouncement.title}" />
+        <Entry Text="{Binding SelectAnnouncement.Message}" />
+        <Entry Text="{Binding SelectAnnouncement.time}" />
+        
+
+        <Button Text="Post" Command="{Binding PostCommand}" />
+    </StackLayout>
+    
+</ContentPage>

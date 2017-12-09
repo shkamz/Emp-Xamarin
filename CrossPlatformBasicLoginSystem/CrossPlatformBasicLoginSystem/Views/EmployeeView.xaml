@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossPlatformBasicLoginSystem.Views.EmployeeView"
+             
+             
+             xmlns:ViewModels="clr-namespace:CrossPlatformBasicLoginSystem.ViewModels;assembly=CrossPlatformBasicLoginSystem">
+    
+
+
+    <ContentPage.BindingContext>
+        <ViewModels:MainViewModels />
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding employeelist}"
+              HasUnevenRows="True">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" >
+                        <Label Text="{Binding Emp_Id}" />
+                        <Label Text="{Binding Emp_Name}" />
+                        <Label Text="{Binding Password}" />
+                    </StackLayout>
+                    
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossPlatformBasicLoginSystem.Views.Announcement"
+             NavigationPage.HasBackButton="False"
+             xmlns:ViewModels="clr-namespace:CrossPlatformBasicLoginSystem.ViewModels;assembly=CrossPlatformBasicLoginSystem">
+    
+
+
+    <ContentPage.BindingContext>
+        <ViewModels:AnnouncementMVM />
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding employeelist}"
+              HasUnevenRows="True"
+              IsPullToRefreshEnabled="True"
+              RefreshCommand="{Binding RefreshCommand}"
+              IsRefreshing="{Binding IsRefreshing}">
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" >
+                        
+                        <Label TextColor="#77d065" FontSize = "20" Text="{Binding ID} " />
+                        <Label Text="From" />
+                        <Label Text="{Binding time}" />
+                        <Label Text="{Binding Username}" />
+
+                        <Label Text="{Binding title}" />
+
+                        <Label Text="{Binding Message}" />
+                        <Label Text="---------------------" />
+                        <Button Text="Login" HorizontalOptions="FillAndExpand"
+                            TextColor="White" WidthRequest = "70" HeightRequest = "50"
+                            BackgroundColor="#22A7F0"
+                            x:Name="ButtonLogin"
+                            Clicked="ButtonLogin_Clicked"/>
+
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+</ContentPage>

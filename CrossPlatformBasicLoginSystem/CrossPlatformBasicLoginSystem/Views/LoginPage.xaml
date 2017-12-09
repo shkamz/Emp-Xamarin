@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossPlatformBasicLoginSystem.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    
+    <StackLayout Padding="20" Spacing="10" VerticalOptions="Start">
+        <Label Text="Username"
+               HorizontalOptions="Center"/>
+        <Entry Text=""
+               x:Name="EntryUsername" Placeholder="Enter Username" WidthRequest = "20" HeightRequest = "50" HorizontalOptions="FillAndExpand"/>
+        <Label Text="Password"
+               HorizontalOptions="Center"/>
+        <Entry Text=""
+               x:Name="EntryPassword" Placeholder="Enter Password" WidthRequest = "20" HeightRequest = "50" HorizontalOptions="FillAndExpand"
+               IsPassword="True"/>
+        <Button Text="Login"
+                TextColor="White"
+                BackgroundColor="#22A7F0"
+                x:Name="ButtonLogin"
+                Clicked="ButtonLogin_Clicked" WidthRequest = "20" HeightRequest = "50" VerticalOptions="FillAndExpand"/>
+    </StackLayout>
+</ContentPage>

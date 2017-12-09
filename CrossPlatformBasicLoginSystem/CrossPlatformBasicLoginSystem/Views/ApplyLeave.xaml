@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="CrossPlatformBasicLoginSystem.Views.ApplyLeave">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            
+            <Label Text="Reason" HorizontalOptions="Center"/>
+            <Entry Text="" x:Name="EntryReason"/>
+            <Label Text="Name" HorizontalOptions="Center"/>
+            <Entry Text="" x:Name="EntryName"/>
+            <Label Text="LeaveType" HorizontalOptions="Center"/>
+            <Entry Text="" x:Name="EntryType"/>
+            <Label x:Name="lblTitle" Text = "Start Date" HorizontalOptions="Center" ></Label>
+            <DatePicker x:Name="datepicker"  Date="{x:Static sys:DateTime.Now}" />
+            <Label x:Name="lblTitlee" Text = "End Date" HorizontalOptions="Center" ></Label>
+            <DatePicker x:Name="dateendpicker" Date="{x:Static sys:DateTime.Now}" />
+            
+            <Button Text="Apply Leave"
+                TextColor="White"
+                BackgroundColor="#22A7F0"
+                x:Name="SubmitLeave"   Clicked="ButtonLogin_Clicked" />
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

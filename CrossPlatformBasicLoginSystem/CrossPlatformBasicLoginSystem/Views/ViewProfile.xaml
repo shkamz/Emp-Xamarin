@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossPlatformBasicLoginSystem.Views.ViewProfile">
+    <ContentPage.Content>
+        
+        <ScrollView>
+      <RelativeLayout>
+        <BoxView Color="Gray" HeightRequest="100" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+        <Button BorderRadius="35" x:Name="imageCircleBack"
+            BackgroundColor="Maroon" HeightRequest="70" WidthRequest="70" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=.5, Constant = -35}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=70}" />
+        <Button BorderRadius="30" BackgroundColor="Red" HeightRequest="60"
+            WidthRequest="60" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=imageCircleBack, Property=X, Factor=1,Constant=5}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=75}" />
+                <Label Text="User Name" FontAttributes="Bold" FontSize="26" x:Name="EntryName"
+            HorizontalTextAlignment="Center" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=140}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+        <Entry Text="Bio + Hashtags" TextColor="White" BackgroundColor="Maroon"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=180}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+        
+        <RelativeLayout Padding="5,0,0,0">
+                    <Label FontSize="14" Text="Age:" TextColor="White"  BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=280}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=40}" />
+                    <Label  TextColor="White"  x:Name="EntryAge" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=280}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+        </RelativeLayout>
+        <RelativeLayout  Padding="5,0,0,0">
+                    <Label FontSize="14" Text="Department:" TextColor="White" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=320}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+                    <Label  TextColor="White" x:Name="EntryDept" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=320}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+        </RelativeLayout>
+        <RelativeLayout  Padding="5,0,0,0">
+                    <Label FontSize="14" Text="Tel:" TextColor="White" BackgroundColor="#22A7F0"
+            LineBreakMode="WordWrap"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=370}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+            <Label  TextColor="White" x:Name="EntryTel"
+            BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=370}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+        </RelativeLayout>
+            <RelativeLayout  Padding="5,0,0,0">
+                    <Label FontSize="14" Text="Role:" TextColor="White" BackgroundColor="#22A7F0"
+            LineBreakMode="WordWrap"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=415}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+                    <Label  TextColor="White" x:Name="EntryRole" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=415}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+             <RelativeLayout  Padding="5,0,0,0">
+                        <Label FontSize="14" Text="IC Number:" TextColor="White" BackgroundColor="#22A7F0"
+            LineBreakMode="WordWrap"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=460}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+                        <Label  TextColor="White"  x:Name="EntryIC" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=460}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+            </RelativeLayout>
+            <RelativeLayout  Padding="5,0,0,0">
+                        <Label FontSize="14" Text="Race:" TextColor="White" BackgroundColor="#22A7F0"
+            LineBreakMode="WordWrap"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=500}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+            <Label  TextColor="White" x:Name="EntryRace" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=500}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+            </RelativeLayout>
+            <RelativeLayout  Padding="5,0,0,0">
+                        <Label FontSize="14" Text="Ask me about:" TextColor="White" BackgroundColor="#22A7F0"
+            LineBreakMode="WordWrap"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=550}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+               <Label Text="Xamarin, C#, .NET, Mono" TextColor="White" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=550}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+            </RelativeLayout>
+                    <RelativeLayout  Padding="5,0,0,0">
+                        <Label FontSize="14" Text="Date Join" TextColor="White" BackgroundColor="#22A7F0"
+            LineBreakMode="WordWrap"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=600}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+                        <Label x:Name="EntryDOB" TextColor="White" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=600}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+                    </RelativeLayout>
+                    <RelativeLayout  Padding="5,0,0,0">
+                        <Label FontSize="14" Text="Nationality" TextColor="White" BackgroundColor="#22A7F0"
+            LineBreakMode="WordWrap"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=650}"
+            
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,,Factor=1}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+                        <Label x:Name="EntryNan" TextColor="White" BackgroundColor="#22A7F0"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=650}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0,Constant=50}" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                
+            </RelativeLayout>
+            
+    </ScrollView>
+
+        <!--<StackLayout Grid.Row="2" Orientation="Vertical" Spacing="6">
+            <Entry Text="" x:Name="EntryUser"/>
+            <Button Text="Post Announcement"
+                TextColor="White"
+                BackgroundColor="#22A7F0"
+                x:Name="ButtonLogin" Clicked="ButtonLogin_Clicked" HeightRequest="30" WidthRequest="20"/>
+        
+        
+            <Label Text="Welcome to Xamarin Forms!" x:Name="EntryName" />
+            <Label Text="" x:Name="EntryAge" />
+            <Label Text="" x:Name="EntryDept" />
+            <Label Text="" x:Name="EntryTel" />
+            <Label Text="" x:Name="EntryRole" />
+            <Label Text="" x:Name="EntryIC" />
+            <Label Text="" x:Name="EntryRace" />
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>
